@@ -3,12 +3,123 @@ button {
     border: none;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    height: 80px;
+    box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
+}
+
 #logo {
     height: 64px;
     cursor: pointer;
 }
 
+#little_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 8px; */
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    min-width: 335px;
+    height: 48px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease-out;
+}
+
+#little_search:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#little_search * {
+    cursor: pointer;
+}
+
+.little_search_button {
+    display: block;
+    flex-shrink: 0;
+    padding: 0 16px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+
+.little_search_button:nth-of-type(3) {
+    color: #717171;
+}
+
+.divider {
+    display: block;
+    flex-basis: 1px;
+    flex-shrink: 0;
+    background-color: #dddddd;
+    height: 24px;
+}
+
+#magnifying-glass-wrapper {
+    background-color: #ff385c;
+    border-radius: 50%;
+    flex-basis: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 #magnifying-glass-icon {
     width: 12px;
-    background-color: black;
+}
+
+#header-right-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#do-airbnb {
+    font-size: 14px;
+    color: #222222;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 22px;
+    padding: 15px;
+
+    transition: background-color 0.3s ease-out;
+}
+
+#do-airbnb:hover {
+    background-color: #f7f7f7;
+}
+
+#profile-sction {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 12px;
+    border: 1px solid #dddddd;
+    border-radius: 21px;
+    gap: 12px;
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease-out;
+}
+
+#profile-sction:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.categori input[type="radio"] {
+    appearance: none;
+}
+
+.categori input[type="radio"]:checked + label {
+    /* border: 0.4em solid tomato; */
+    background: red;
 }
