@@ -115,11 +115,133 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.categori input[type="radio"] {
-    appearance: none;
+#category-bar {
+    display: flex;
+    gap: 32px;
+    padding: 20px 40px;
+    overflow: auto;
 }
 
-.categori input[type="radio"]:checked + label {
-    /* border: 0.4em solid tomato; */
-    background: red;
+#category-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.category-button {
+    color: #717171;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.category-button > img {
+    width: 28px;
+}
+
+.category-button > .active_img {
+    display: none;
+}
+.category-button:hover > .inactive_img {
+    display: none;
+}
+.category-button:hover > .active_img {
+    display: inherit;
+}
+
+.category-button:hover {
+    color: #000000;
+    border-bottom: 2px solid #dddddd;
+}
+
+#active-category {
+    color: #000000;
+    border-bottom: 2px solid #dddddd;
+}
+
+#active-category:hover > .inactive_img {
+    display: none;
+}
+#active-category:hover > .active_img {
+    display: inherit;
+}
+
+.place-image-wrapper {
+    position: relative;
+    width: 308px;
+    height: 293px;
+    overflow: hidden;
+
+    border-radius: 23px;
+}
+
+.place-image-wrapper img {
+    width: 500px;
+    height: 500px;
+}
+
+.place-image-wrapper .heart-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.description-section {
+    display: flex;
+    flex-direction: column;
+    color: rgb(34, 34, 34);
+    font-size: 15;
+    gap: 3px;
+    margin-top: 13px;
+}
+
+.description-section-title {
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 0 80px;
+}
+.place-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 308px);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 40px 24px;
+}
+
+.heart-icon:active {
+    transform: scale(0.5);
+    transition: transform 0.25s ease;
+}
+
+#floating-map-button {
+    position: fixed;
+    background-color: #222222;
+    border-radius: 24px;
+    bottom: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px 19px;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+#floating-map-button:hover {
+    box-shadow: 0 0 0 1px transparent, 0 0 0 4px transparent,
+        0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateX(-50%) scale(1.04);
 }
